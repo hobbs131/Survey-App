@@ -25,7 +25,7 @@ local setup:
 pipenv install
 pipenv shell
 
-# create .env with datastore connection params (see .env.example)
+# create .env with datastore connection params
 heroku pg:psql
 # run schema.sql against the DB
 
