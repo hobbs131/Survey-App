@@ -2,7 +2,7 @@
 Simple full-stack survey application
 
 Backend:
-- Python + flask + PostgreSQL
+- Python + Flask + PostgreSQL
 
 Frontend: 
 - HTML/Pure CSS
