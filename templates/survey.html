@@ -1,0 +1,46 @@
+{% extends "parent.html" %}
+{% block title %} Thanks{% endblock %}
+{% block content %}
+<form  method = "post" action = "/surveyResults" class="pure-form pure-form-stacked">
+<fieldset>
+    <legend>Survey Form</legend>
+    <label for="input">Do you like chicken?</label>
+    <input type="text" id="input" name = "input" placeholder="Input" minlength="3" required>
+    <br>
+    <p>Please select your gender:</p>
+    <label for="male">Male</label>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="female">Female</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="other">Other</label>
+    <input type="radio" id="other" name="gender" value="other">
+    <br><br>
+    <label for="numbers">Choose a number:</label>
+    <div align = "center">
+    <select name="numbers" id="numbers">
+      <option value="2">2</option>
+      <option value="7">7</option>
+      <option value="356">356</option>
+    </select><br>
+    </div>
+    <label for="checkbox"> Check this. Or not.</label>
+    <input type="checkbox" id="checkbox" name="checkbox" value="Check" onclick = "myFunction()">
+    <textarea id = "text" style = "display:none">
+        Hi, you clicked the box!
+    </textarea>
+    <br><br>
+    <button id = "next" type="submit" class="pure-button pure-button-primary">Next</button>
+</fieldset>
+</form>
+<script>
+function myFunction() {
+  var checkBox = document.getElementById("checkbox");
+  var text = document.getElementById("text");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}
+</script>
+{% endblock %}

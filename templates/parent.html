@@ -1,0 +1,45 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/pure-min.css" integrity="sha384-LTIDeidl25h2dPxrB2Ekgc9c7sEC3CWGM6HeFmuDNUjX76Ert4Z4IY714dhZHPLd" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/grids-responsive-min.css" />
+
+  <link rel="stylesheet" href="/static/style.css">
+  
+  <title> {% block title %}{% endblock %} | Survey</title>
+</head>
+<body>
+  <div id="menu">
+    <div class="pure-menu">
+      <a href="#" class="pure-menu-heading pure-menu-link">Survey</a>
+        <ul class="pure-menu-horizontal">
+          <li class="pure-menu-item">
+            <a href="{{ url_for("root") }}" class="pure-menu-link">Consent</a>
+          </li>
+          <li class="pure-menu-item">
+            <a href="{{ url_for("survey") }}" class="pure-menu-link">Form</a>
+          </li>
+          <li class="pure-menu-item">
+            <a href="{{ url_for("api_results") }}" class="pure-menu-link">API results</a>
+          </li>
+          <li class="pure-menu-item">
+            <a href="{{ url_for("thanks") }}" class="pure-menu-link">Thanks</a>
+          </li>
+          <li class="pure-menu-item">
+            <a href="{{ url_for("decline") }}" class="pure-menu-link">Decline</a>
+          </li>
+          
+        </ul>
+    </div>
+  </div>
+
+  <div id="content">
+    {% block content %}
+    {% endblock %}
+  </div>
+</div>
+</html>

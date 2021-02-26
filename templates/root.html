@@ -1,0 +1,15 @@
+{% extends "parent.html" %}
+{% block title %} Thanks{% endblock %}
+{% block content %}
+<big style="text-align:center;font-size:36px;">Hi, this survey is an extremely important scientific study pertaining to decision making. Proceed with caution.</big><br><br>
+<button id="consent" class="pure-button1">Consent</button>
+<button id = "decline" class="pure-button2">Decline</button>
+<script type="text/javascript">
+    document.getElementById("consent").onclick = function () {
+        location.href = "/survey";
+    };
+    document.getElementById("decline").onclick = function () {
+        location.href = "/decline";
+    };
+</script>
+{% endblock %}
