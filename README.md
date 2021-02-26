@@ -1,5 +1,6 @@
 # Survey-App
-Simple survey application
+Simple survey application.
+
 Backend:
 - Python + flask + PostgreSQL
 
